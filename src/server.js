@@ -16,13 +16,8 @@ const init = async () => {
  
   await server.start();
   console.log(`Server berjalan pada ${server.info.uri}`);
-  if (process.env.NODE_ENV === 'production') {
-    console.log('Server berjalan pada mode production');
-    // Do something in production environment
-  } else {
-    // Do something in other environments
-    console.log('Server berjalan pada mode development');
-  }
+  console.log(process.env.NODE_ENV);
+
   
 };
 
